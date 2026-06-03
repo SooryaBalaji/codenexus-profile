@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import sooryaAsset from "@/assets/soorya.png.asset.json";
 import rpsAsset from "@/assets/rps.png.asset.json";
+import chemAsset from "@/assets/chem.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -422,6 +423,7 @@ function Projects() {
           subtitle="Honors Chemistry · Independent Study Tool"
           year="2026"
           link="https://www.programiz.com/online-compiler/2MSLuk4GSnEFu"
+          image={chemAsset.url}
           code={`import random
 
 flashcards = {
