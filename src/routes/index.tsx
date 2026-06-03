@@ -50,69 +50,69 @@ function Nav() {
 
 function About() {
   return (
-    <section id="about" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20">
-      <div className="mb-12 max-w-2xl">
-        <p className="mb-3 text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground">
-          About Me
-        </p>
-        <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-          Building bridges between quantum theory and modern software.
-        </h1>
-      </div>
-
-      <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr]">
-        <div className="space-y-6 text-[17px] leading-relaxed text-foreground/90">
-          <p>
-            My career goal is to enter the field of quantum computing and advanced software systems engineering. I plan to complete an undergraduate program in computer science with a concentration in quantum information, followed by graduate level training in quantum algorithms and high-assurance systems. I am motivated to pursue this career because it sits at the intersection of physical law and engineered abstraction, and I believe the next generation of meaningful software will be written by people who understand both layers fluently.
+    <section id="about" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-8">
+      <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
+        <div>
+          <p className="mb-2 text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground">
+            About Me
           </p>
-          <p>
-            My strongest qualities are that I am methodical, accurate, and innovative. I am reliable and diligent when building quantum computing demonstrations that visualize superposition and entanglement. I am organized and persistent in managing complex web application projects, and I am resourceful in authoring script validation architectures. I am knowledgeable in programming through Honors Chemistry, Advanced Algebra II, and sustained work in Python and Java. I am adaptable when learning new technologies and cooperative when collaborating with others.
-          </p>
-          <p>
-            These experiences have shaped a clear direction toward the work I want to do. Thank you for taking the time to read this introduction. Please continue through the Resume and Projects sections of this portfolio to see the details of my academic record, professional experience, and technical projects.
-          </p>
+          <h1 className="font-display text-3xl font-semibold leading-[1.1] tracking-tight md:text-4xl">
+            Building bridges between quantum theory and modern software.
+          </h1>
+          <div className="mt-5 space-y-4 text-[15px] leading-relaxed text-foreground/90">
+            <p>
+              My career goal is to enter the field of quantum computing and advanced software systems engineering. I plan to complete an undergraduate program in computer science with a concentration in quantum information, followed by graduate level training in quantum algorithms and high-assurance systems. I am motivated to pursue this career because it sits at the intersection of physical law and engineered abstraction, and I believe the next generation of meaningful software will be written by people who understand both layers fluently.
+            </p>
+            <p>
+              My strongest qualities are that I am methodical, accurate, and innovative. I am reliable and diligent when building quantum computing demonstrations that visualize superposition and entanglement. I am organized and persistent in managing complex web application projects, and I am resourceful in authoring script validation architectures. I am knowledgeable in programming through Honors Chemistry, Advanced Algebra II, and sustained work in Python and Java. I am adaptable when learning new technologies and cooperative when collaborating with others.
+            </p>
+            <p>
+              These experiences have shaped a clear direction toward the work I want to do. Thank you for taking the time to read this introduction. Please continue through the Resume and Projects sections of this portfolio to see the details of my academic record, professional experience, and technical projects.
+            </p>
+          </div>
         </div>
 
-        <aside className="space-y-6">
+        <aside className="space-y-4">
           <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-elevated)]">
-            <div className="aspect-[4/5] overflow-hidden bg-muted">
+            <div className="aspect-[4/3] overflow-hidden bg-muted">
               <img
                 src={sooryaAsset.url}
                 alt="Portrait of Soorya Balaji"
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="p-5">
-              <p className="font-display text-xl font-semibold">Soorya Balaji</p>
-              <p className="text-sm text-muted-foreground">
+            <div className="p-4">
+              <p className="font-display text-lg font-semibold">Soorya Balaji</p>
+              <p className="text-xs text-muted-foreground">
                 Student Engineer · Quantum Computing
               </p>
             </div>
           </div>
 
-          <div className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
-            <h2 className="mb-4 font-display text-lg font-semibold">Quick Information</h2>
+          <div className="rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-card)]">
+            <h2 className="mb-3 font-display text-base font-semibold">Quick Information</h2>
             <table className="w-full text-sm">
               <tbody className="divide-y divide-border">
                 <tr>
-                  <th className="w-32 py-3 text-left font-medium text-muted-foreground">Location</th>
-                  <td className="py-3 text-foreground">Dublin, CA</td>
+                  <th className="w-24 py-2 text-left font-medium text-muted-foreground">Location</th>
+                  <td className="py-2 text-foreground">Dublin, CA</td>
                 </tr>
                 <tr>
-                  <th className="py-3 text-left font-medium text-muted-foreground">Email</th>
-                  <td className="break-all py-3 text-foreground">soorya_balaji@outlook.com</td>
+                  <th className="py-2 text-left font-medium text-muted-foreground">Email</th>
+                  <td className="break-all py-2 text-foreground">soorya_balaji@outlook.com</td>
                 </tr>
                 <tr>
-                  <th className="py-3 text-left align-top font-medium text-muted-foreground">
+                  <th className="py-2 text-left align-top font-medium text-muted-foreground">
                     Skills
                   </th>
-                  <td className="py-3 text-foreground">
-                    Quantum Computing Frameworks, Python, Java, Git, GitHub, Interface Validation
+                  <td className="py-2 text-foreground">
+                    PennyLane, Qiskit, Python, Java, Git, GitHub
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+
         </aside>
       </div>
     </section>
