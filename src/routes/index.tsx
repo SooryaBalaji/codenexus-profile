@@ -172,11 +172,13 @@ function Resume() {
           <ResumeBlock title="Experience">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <p className="font-semibold">
-                Founder and Lead Developer · thequantumbindapp.tech
+                Founder and Lead Developer · QuantumBind
               </p>
-              <p className="text-sm text-muted-foreground">September 2025 – Present</p>
+              <p className="text-sm text-muted-foreground">April 2026 – Present</p>
             </div>
-            <p className="text-sm text-muted-foreground">Emerald High School · Dublin, CA</p>
+            <p className="text-sm text-muted-foreground">
+              github.com/SooryaBalaji/QuantumBind · Dublin, CA
+            </p>
             <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[15px]">
               <li>Engineer localized web application interfaces optimized for advanced processing logic</li>
               <li>Maintain repository branches for open-access simulation tools</li>
@@ -188,15 +190,28 @@ function Resume() {
           <ResumeBlock title="Volunteer Experience">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <p className="font-semibold">
-                Community Technology Assistant · Local Community Organization
+                Eyelevel Learning Center · Inventory Management and Lesson Plan Packing
               </p>
-              <p className="text-sm text-muted-foreground">June 2024 – August 2025</p>
+              <p className="text-sm text-muted-foreground">March 2022 – April 2025</p>
             </div>
-            <p className="text-sm text-muted-foreground">Dublin, CA</p>
+            <p className="text-sm text-muted-foreground">Walnut Creek, CA</p>
             <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[15px]">
-              <li>Supervised weekly hardware peripheral allocation for regional data workshops</li>
-              <li>Organized instructional support files explaining simple operating systems tasks</li>
-              <li>Diagnosed data link degradation faults across basic workstation nodes</li>
+              <li>Unpacked monthly shipments of educational booklets and organized them across inventory shelves</li>
+              <li>Assembled customized monthly lesson plans tailored to each student based on assigned booklets</li>
+              <li>Maintained inventory accuracy through consistent stock tracking and organization</li>
+            </ul>
+
+            <div className="mt-6 flex flex-wrap items-baseline justify-between gap-2">
+              <p className="font-semibold">
+                Sydney Paige Foundation · Inventory Packing and Organization
+              </p>
+              <p className="text-sm text-muted-foreground">April 2025 – September 2025</p>
+            </div>
+            <p className="text-sm text-muted-foreground">Walnut Creek, CA</p>
+            <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[15px]">
+              <li>Managed incoming warehouse inventory and organized donated materials categorically</li>
+              <li>Packed educational resources for underprivileged students and schools in developing countries</li>
+              <li>Collaborated with warehouse volunteers to streamline categorization and packing workflows</li>
             </ul>
           </ResumeBlock>
 
@@ -219,11 +234,9 @@ function Resume() {
                   Structural
                 </p>
                 <ul className="list-disc space-y-1 pl-5 text-[15px]">
-                  <li>Microsoft Word</li>
-                  <li>Google Docs</li>
                   <li>Advanced Algebra II</li>
                   <li>Honors Chemistry</li>
-                  <li>CPR Certified</li>
+                  <li>Frontend and Backend Development</li>
                 </ul>
               </div>
               <div>
@@ -239,6 +252,7 @@ function Resume() {
               </div>
             </div>
           </ResumeBlock>
+
 
           <div className="mt-10 flex justify-center">
             <a
