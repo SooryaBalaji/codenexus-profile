@@ -322,6 +322,7 @@ function ProjectCard({
   teamwork,
   reflection,
   link,
+  image,
 }: {
   number: string;
   title: string;
@@ -335,6 +336,7 @@ function ProjectCard({
   teamwork: string;
   reflection: string;
   link: string;
+  image?: string;
 }) {
   return (
     <article className="grid gap-0 overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] lg:grid-cols-[1fr_1.4fr]">
@@ -346,7 +348,14 @@ function ProjectCard({
           <p className="font-display text-3xl font-semibold leading-tight">{title}</p>
           <p className="mt-2 text-sm text-muted-foreground">{subtitle}</p>
         </div>
-        <ProjectMockup label={title} tone={number === "01" ? "infra" : "bind"} />
+        {image ? (
+          <div className="overflow-hidden rounded-2xl border border-border bg-card">
+            <img src={image} alt={`${title} screenshot`} className="h-full w-full object-cover" />
+          </div>
+        ) : (
+          <ProjectMockup label={title} tone={number === "01" ? "infra" : "bind"} />
+        )}
+
         <a
           href={link}
           target="_blank"
