@@ -307,6 +307,90 @@ function ProjectMockup({ label, tone }: { label: string; tone: "bind" | "infra" 
   );
 }
 
+function ProjectCard({
+  number,
+  title,
+  subtitle,
+  year,
+  code,
+  objective,
+  role,
+  skills,
+  challenges,
+  teamwork,
+  reflection,
+  link,
+}: {
+  number: string;
+  title: string;
+  subtitle: string;
+  year: string;
+  code: string;
+  objective: string;
+  role: string;
+  skills: string[];
+  challenges: string;
+  teamwork: string;
+  reflection: string;
+  link: string;
+}) {
+  return (
+    <article className="grid gap-0 overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] lg:grid-cols-[1fr_1.4fr]">
+      <div className="border-b border-border bg-secondary/50 p-6 lg:border-b-0 lg:border-r">
+        <span className="inline-block rounded-md border border-border bg-card px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
+          Project {number}
+        </span>
+        <pre className="mt-5 overflow-x-auto whitespace-pre-wrap rounded-lg bg-background/60 p-4 text-[11px] leading-relaxed text-foreground/80 font-mono">
+{code}
+        </pre>
+      </div>
+      <div className="p-8 md:p-10">
+        <div className="flex items-start justify-between gap-4">
+          <h3 className="font-display text-2xl font-semibold leading-tight">{title}</h3>
+          <span className="shrink-0 text-sm text-muted-foreground">{year}</span>
+        </div>
+        <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>
+
+        <div className="mt-8 grid gap-8 md:grid-cols-2">
+          <ProjectField label="Objective" body={objective} />
+          <ProjectField label="Role" body={role} />
+          <div>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+              Skills Learned
+            </p>
+            <ul className="list-disc space-y-1 pl-5 text-[15px]">
+              {skills.map((s) => <li key={s}>{s}</li>)}
+            </ul>
+          </div>
+          <ProjectField label="Challenges" body={challenges} />
+          <ProjectField label="Teamwork / Leadership" body={teamwork} />
+          <ProjectField label="Reflection" body={reflection} />
+        </div>
+
+        <div className="mt-8">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-card)] transition-all hover:translate-y-[-1px] hover:shadow-[var(--shadow-elevated)]"
+          >
+            View Project Code
+          </a>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function ProjectField({ label, body }: { label: string; body: string }) {
+  return (
+    <div>
+      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent">{label}</p>
+      <p className="text-[15px] leading-relaxed text-foreground/90">{body}</p>
+    </div>
+  );
+}
+
 function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20">
@@ -320,81 +404,108 @@ function Projects() {
       </div>
 
       <div className="space-y-12">
-        {/* Project 1 */}
-        <article className="grid gap-8 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] md:p-10 lg:grid-cols-2 lg:items-center">
-          <div className="space-y-4">
-            <div className="flex flex-wrap gap-2 text-xs">
-              <span className="rounded-full bg-secondary px-3 py-1 font-medium text-secondary-foreground">
-                Computer Science Engineering / Independent Concept Application
-              </span>
-              <span className="rounded-full border border-border px-3 py-1 text-muted-foreground">
-                May 2026 – June 2026
-              </span>
-            </div>
-            <h3 className="font-display text-2xl font-semibold leading-tight">
-              The Quantum Bind App Architecture
-              <span className="block text-base font-normal text-muted-foreground">
-                thequantumbindapp.tech
-              </span>
-            </h3>
-            <p className="text-[15px] leading-relaxed text-foreground/90">
-              The objective of this project was to launch an interactive web interface focused on
-              communicating core quantum computing concepts to a general audience. As the creator and
-              lead developer, I built the structural components, managed all stylesheet logic, and
-              ran configuration testing across browsers and devices.
-            </p>
-            <p className="text-[15px] leading-relaxed text-foreground/90">
-              Through the build I deepened my understanding of quantum logical states and the data
-              interfaces required to represent them faithfully. I resolved persistent configuration
-              errors by implementing custom variable parsing scripts that validated environment
-              definitions before deployment.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Skills exemplified: front-end architecture, configuration validation, applied quantum
-              concepts.
-            </p>
-          </div>
-          <ProjectMockup label="Quantum Bind · Web App" tone="bind" />
-        </article>
+        <ProjectCard
+          number="01"
+          title="Python Chemistry Flashcards"
+          subtitle="Honors Chemistry · Independent Study Tool"
+          year="2026"
+          link="https://www.programiz.com/online-compiler/2MSLuk4GSnEFu"
+          code={`import random
 
-        {/* Project 2 */}
-        <article className="grid gap-8 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] md:p-10 lg:grid-cols-2 lg:items-center">
-          <div className="space-y-4 lg:order-2">
-            <div className="flex flex-wrap gap-2 text-xs">
-              <span className="rounded-full bg-secondary px-3 py-1 font-medium text-secondary-foreground">
-                Applied Conceptual Project
-              </span>
-              <span className="rounded-full border border-border px-3 py-1 text-muted-foreground">
-                April 2026 – May 2026
-              </span>
-            </div>
-            <h3 className="font-display text-2xl font-semibold leading-tight">
-              Localized Desktop Infrastructure Deployment
-            </h3>
-            <p className="text-[15px] leading-relaxed text-foreground/90">
-              The objective of this project was to establish a secured local staging environment on
-              legacy desktop hardware arrays at Emerald High School. Serving as infrastructure lead,
-              I tested storage systems, deployed automated configurations, and monitored packet maps
-              across the internal network.
-            </p>
-            <p className="text-[15px] leading-relaxed text-foreground/90">
-              The work directly applied computer science classroom concepts to a physical
-              environment. When hardware address collisions interrupted device routing, I resolved
-              the conflict by initializing unique subnetworks and documenting the new addressing
-              scheme for future maintenance.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Skills exemplified: systems administration, automation, network diagnostics.
-            </p>
-          </div>
-          <div className="lg:order-1">
-            <ProjectMockup label="Local Infrastructure · Lab" tone="infra" />
-          </div>
-        </article>
+flashcards = {
+    "H": "Hydrogen",
+    "He": "Helium",
+    "Li": "Lithium",
+    "Be": "Beryllium",
+    "C": "Carbon",
+    "N": "Nitrogen",
+    "O": "Oxygen",
+    "Na": "Sodium",
+}
+
+score = 0
+symbols = list(flashcards.keys())
+random.shuffle(symbols)
+
+for symbol in symbols:
+    answer = input(f"What element is {symbol}? ")
+    if answer.strip().lower() == flashcards[symbol].lower():
+        print("Correct!")
+        score += 1
+    else:
+        print(f"The answer was {flashcards[symbol]}")
+
+print(f"Final score: {score}/{len(symbols)}")`}
+          objective="Build an interactive Python program that quizzes the user on chemical element symbols and reinforces Honors Chemistry vocabulary through repeated active recall."
+          role="Sole developer responsible for designing the flashcard dictionary, randomization logic, input validation, and scoring system in Python."
+          skills={[
+            "Python dictionaries and lists",
+            "Loop and conditional logic",
+            "User input validation",
+            "Randomization with the random module",
+            "Score tracking and feedback",
+          ]}
+          challenges="Early versions marked correct answers wrong due to case sensitivity and trailing spaces. The issue was resolved by normalizing input with strip and lower before comparison."
+          teamwork="Completed independently as a personal study aid. Required disciplined iteration and consistent testing across many element entries to confirm reliability."
+          reflection="The project deepened understanding of data structures and reinforced how small programs can directly support classroom learning by turning memorization into an interactive feedback loop."
+        />
+
+        <ProjectCard
+          number="02"
+          title="Python Rock Paper Scissors Program"
+          subtitle="Computer Science Essentials"
+          year="2026"
+          link="https://www.programiz.com/online-compiler/2EN5u4iHpk8TQ"
+          code={`import random
+
+print("Welcome to Rock Paper Scissors!")
+print("You will play 100 rounds against the computer.")
+print("Type r for rock, p for paper, or s for scissors")
+
+user_score = 0
+computer_score = 0
+ties = 0
+user_history = []
+round_number = 1
+
+while round_number <= 100:
+    print("Round", round_number)
+    user_move = input("Enter your move (r/p/s): ")
+
+    while user_move not in ["r", "p", "s"]:
+        user_move = input("Invalid move. Enter r, p, or s: ")
+
+    # Computer strategy: counter repeated moves
+    if len(user_history) >= 2 and user_history[-1] == user_history[-2]:
+        if user_history[-1] == "r":
+            computer_move = "p"
+        elif user_history[-1] == "p":
+            computer_move = "s"
+        else:
+            computer_move = "r"
+    else:
+        computer_move = random.choice(["r", "p", "s"])
+
+    user_history.append(user_move)
+    round_number += 1`}
+          objective="Create an interactive Python game that allows users to play multiple rounds of Rock Paper Scissors against the computer while tracking scores and outcomes."
+          role="Developed the full game logic, user interaction system, and score-tracking functionality using Python."
+          skills={[
+            "Python programming fundamentals",
+            "Conditional statements and loops",
+            "User input handling",
+            "Debugging and testing",
+            "Logical problem-solving",
+          ]}
+          challenges="One challenge was ensuring the score updated correctly after every round and that invalid inputs were handled properly. The program improved through testing multiple game scenarios and reorganizing the game loop."
+          teamwork="Completed independently and required persistence, troubleshooting, and iterative improvement throughout development."
+          reflection="This project strengthened understanding of programming structure and problem-solving, and taught the importance of testing code carefully and improving programs through debugging and revision."
+        />
       </div>
     </section>
   );
 }
+
 
 function Footer() {
   return (
