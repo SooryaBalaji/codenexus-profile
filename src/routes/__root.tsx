@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Soorya B CSE Portfolio" },
+      { name: "description", content: "A professional, minimalist single-page portfolio showcasing skills in quantum computing and software engineering." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Soorya B CSE Portfolio" },
+      { property: "og:description", content: "A professional, minimalist single-page portfolio showcasing skills in quantum computing and software engineering." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Soorya B CSE Portfolio" },
+      { name: "twitter:description", content: "A professional, minimalist single-page portfolio showcasing skills in quantum computing and software engineering." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5d541450-13e2-4c28-ba10-2c37ccc966a4/id-preview-9e3b0c06--9e0b548c-74f7-4366-aff8-23f4c4f0e192.lovable.app-1780468764045.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5d541450-13e2-4c28-ba10-2c37ccc966a4/id-preview-9e3b0c06--9e0b548c-74f7-4366-aff8-23f4c4f0e192.lovable.app-1780468764045.png" },
     ],
     links: [
       {
