@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import sooryaAsset from "@/assets/soorya.png.asset.json";
+import rpsAsset from "@/assets/rps.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
