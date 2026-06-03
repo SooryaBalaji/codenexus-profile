@@ -19,8 +19,10 @@ function Nav() {
     { href: "#about", label: "About Me" },
     { href: "#resume", label: "Resume" },
     { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
   ];
   return (
+
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#about" className="font-display text-lg font-semibold tracking-tight">
@@ -342,6 +344,7 @@ function ProjectCard({
           <p className="font-display text-3xl font-semibold leading-tight">{title}</p>
           <p className="mt-2 text-sm text-muted-foreground">{subtitle}</p>
         </div>
+        <ProjectMockup label={title} tone={number === "01" ? "infra" : "bind"} />
         <a
           href={link}
           target="_blank"
@@ -351,6 +354,7 @@ function ProjectCard({
           View Project Code →
         </a>
       </div>
+
       <div className="p-8 md:p-10">
         <div className="flex items-start justify-between gap-4">
           <h3 className="font-display text-2xl font-semibold leading-tight">{title}</h3>
@@ -504,6 +508,57 @@ while round_number <= 100:
 }
 
 
+function Contact() {
+  return (
+    <section id="contact" className="border-t border-border bg-secondary/40">
+      <div className="mx-auto max-w-4xl scroll-mt-24 px-6 py-20">
+        <div className="mb-10 max-w-2xl">
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground">
+            Contact Me
+          </p>
+          <h2 className="font-display text-4xl font-semibold tracking-tight md:text-5xl">
+            Let us connect.
+          </h2>
+          <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
+            Reach out for collaboration on quantum computing demonstrations, software systems projects, or mentorship opportunities.
+          </p>
+        </div>
+        <div className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
+          <table className="w-full text-[15px]">
+            <tbody className="divide-y divide-border">
+              <tr>
+                <th className="w-32 py-4 text-left font-medium text-muted-foreground">Location</th>
+                <td className="py-4 text-foreground">Dublin, California</td>
+              </tr>
+              <tr>
+                <th className="py-4 text-left font-medium text-muted-foreground">Email</th>
+                <td className="break-all py-4">
+                  <a href="mailto:soorya_balaji@outlook.com" className="text-accent hover:underline">
+                    soorya_balaji@outlook.com
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th className="py-4 text-left font-medium text-muted-foreground">GitHub</th>
+                <td className="break-all py-4">
+                  <a
+                    href="https://github.com/SooryaBalaji"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:underline"
+                  >
+                    github.com/SooryaBalaji
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="border-t border-border">
@@ -523,8 +578,10 @@ function Portfolio() {
         <About />
         <Resume />
         <Projects />
+        <Contact />
       </main>
       <Footer />
     </div>
   );
 }
+
