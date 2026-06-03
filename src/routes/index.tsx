@@ -350,13 +350,22 @@ function ProjectCard({
 }) {
   return (
     <article className="grid gap-0 overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] lg:grid-cols-[1fr_1.4fr]">
-      <div className="border-b border-border bg-secondary/50 p-6 lg:border-b-0 lg:border-r">
-        <span className="inline-block rounded-md border border-border bg-card px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
+      <div className="flex flex-col justify-between gap-6 border-b border-border bg-secondary/50 p-8 lg:border-b-0 lg:border-r">
+        <span className="inline-block w-fit rounded-md border border-border bg-card px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
           Project {number}
         </span>
-        <pre className="mt-5 overflow-x-auto whitespace-pre-wrap rounded-lg bg-background/60 p-4 text-[11px] leading-relaxed text-foreground/80 font-mono">
-{code}
-        </pre>
+        <div>
+          <p className="font-display text-3xl font-semibold leading-tight">{title}</p>
+          <p className="mt-2 text-sm text-muted-foreground">{subtitle}</p>
+        </div>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex w-fit items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-card)] transition-all hover:translate-y-[-1px] hover:shadow-[var(--shadow-elevated)]"
+        >
+          View Project Code →
+        </a>
       </div>
       <div className="p-8 md:p-10">
         <div className="flex items-start justify-between gap-4">
@@ -380,21 +389,11 @@ function ProjectCard({
           <ProjectField label="Teamwork / Leadership" body={teamwork} />
           <ProjectField label="Reflection" body={reflection} />
         </div>
-
-        <div className="mt-8">
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-card)] transition-all hover:translate-y-[-1px] hover:shadow-[var(--shadow-elevated)]"
-          >
-            View Project Code
-          </a>
-        </div>
       </div>
     </article>
   );
 }
+
 
 function ProjectField({ label, body }: { label: string; body: string }) {
   return (
