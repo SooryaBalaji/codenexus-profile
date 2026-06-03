@@ -61,7 +61,7 @@ function About() {
             My career goal is to enter the field of quantum computing and advanced software systems engineering. I plan to complete an undergraduate program in computer science with a concentration in quantum information, followed by graduate level training in quantum algorithms and high-assurance systems. I am motivated to pursue this career because it sits at the intersection of physical law and engineered abstraction, and I believe the next generation of meaningful software will be written by people who understand both layers fluently.
           </p>
           <p>
-            My strongest qualities are precision, methodical debugging, and the ability to translate abstract concepts into working systems. I have built quantum computing demonstrations that visualize superposition and entanglement, launched a public web application, and authored script validation architectures that automatically verify configuration files. Honors Chemistry sharpened my measurement discipline, Advanced Algebra II strengthened my reasoning over linear structures, and programming work in Python and Java has given me the engineering instincts to design components that other people can read and extend.
+            My strongest qualities are that I am methodical, accurate, and innovative. I am reliable and diligent when building quantum computing demonstrations that visualize superposition and entanglement. I am organized and persistent in managing complex web application projects, and I am resourceful in authoring script validation architectures. I am knowledgeable in programming through Honors Chemistry, Advanced Algebra II, and sustained work in Python and Java. I am adaptable when learning new technologies and cooperative when collaborating with others.
           </p>
           <p>
             These experiences have shaped a clear direction toward the work I want to do. Thank you for taking the time to read this introduction. Please continue through the Resume and Projects sections of this portfolio to see the details of my academic record, professional experience, and technical projects.
@@ -155,9 +155,14 @@ function Resume() {
               </p>
               <p className="text-sm text-muted-foreground">April 2026 – Present</p>
             </div>
-            <p className="text-sm text-muted-foreground">
-              github.com/SooryaBalaji/QuantumBind · Dublin, CA
-            </p>
+            <a
+              href="https://github.com/SooryaBalaji/QuantumBind"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[var(--shadow-card)] transition-all hover:translate-y-[-1px] hover:shadow-[var(--shadow-elevated)]"
+            >
+              View on GitHub →
+            </a>
             <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[15px]">
               <li>Engineer localized web application interfaces optimized for advanced processing logic</li>
               <li>Maintain repository branches for open-access simulation tools</li>
