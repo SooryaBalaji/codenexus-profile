@@ -468,6 +468,7 @@ print(f"Final score: {score}/{len(symbols)}")`}
           subtitle="Computer Science Essentials"
           year="2026"
           link="https://www.programiz.com/online-compiler/2EN5u4iHpk8TQ"
+          image={rpsAsset.url}
           code={`import random
 
 print("Welcome to Rock Paper Scissors!")
