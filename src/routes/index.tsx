@@ -58,34 +58,13 @@ function About() {
       <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr]">
         <div className="space-y-6 text-[17px] leading-relaxed text-foreground/90">
           <p>
-            My personal career goal is to enter the field of quantum computing and advanced software
-            systems engineering, where computational theory meets the design of real, reliable
-            platforms. To achieve this objective, I plan to complete a rigorous undergraduate program
-            in computer science with a concentration in quantum information, followed by graduate
-            level technical training focused on quantum algorithms, compiler design, and
-            high-assurance systems. I am motivated to explore quantum mechanics and data interfaces
-            because they sit at the precise intersection of physical law and engineered abstraction,
-            and I believe the next generation of meaningful software will be written by people who
-            understand both layers fluently.
+            My career goal is to enter the field of quantum computing and advanced software systems engineering. I plan to complete an undergraduate program in computer science with a concentration in quantum information, followed by graduate level training in quantum algorithms and high-assurance systems. I am motivated to pursue this career because it sits at the intersection of physical law and engineered abstraction, and I believe the next generation of meaningful software will be written by people who understand both layers fluently.
           </p>
           <p>
-            My strongest technical qualities are precision, methodical debugging, and the ability to
-            translate abstract concepts into working systems. I have built small quantum computing
-            concept demonstrations that visualize superposition and entanglement, launched a public
-            web application at thequantumbindapp.tech, and authored script validation architectures
-            that automatically verify configuration files before deployment. These capabilities are
-            grounded in concrete laboratory and classroom experience: Honors Chemistry sharpened my
-            measurement discipline, Advanced Algebra II strengthened my reasoning over linear
-            structures and complex coefficients, and sustained programming work in Python and Java
-            has given me the engineering instincts to design components that other people can read,
-            extend, and trust.
+            My strongest qualities are precision, methodical debugging, and the ability to translate abstract concepts into working systems. I have built quantum computing demonstrations that visualize superposition and entanglement, launched a public web application, and authored script validation architectures that automatically verify configuration files. Honors Chemistry sharpened my measurement discipline, Advanced Algebra II strengthened my reasoning over linear structures, and programming work in Python and Java has given me the engineering instincts to design components that other people can read and extend.
           </p>
           <p>
-            Taken together, these experiences have shaped a clear direction and a steady momentum
-            toward the work I want to do. Thank you for taking the time to read this introduction.
-            Please continue through the Resume and Projects sections of this portfolio to see the
-            details of my academic record, professional experience, and the technical projects that
-            best represent my current craft.
+            These experiences have shaped a clear direction toward the work I want to do. Thank you for taking the time to read this introduction. Please continue through the Resume and Projects sections of this portfolio to see the details of my academic record, professional experience, and technical projects.
           </p>
         </div>
 
