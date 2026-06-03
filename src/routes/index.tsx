@@ -434,7 +434,7 @@ for symbol in symbols:
 
 print(f"Final score: {score}/{len(symbols)}")`}
           objective="Build an interactive Python program that quizzes the user on chemical element symbols and reinforces Honors Chemistry vocabulary through repeated active recall."
-          role="Sole developer responsible for designing the flashcard dictionary, randomization logic, input validation, and scoring system in Python."
+          role="Collaborated with a partner to design the flashcard dictionary, randomization logic, input validation, and scoring system in Python."
           skills={[
             "Python dictionaries and lists",
             "Loop and conditional logic",
@@ -443,7 +443,7 @@ print(f"Final score: {score}/{len(symbols)}")`}
             "Score tracking and feedback",
           ]}
           challenges="Early versions marked correct answers wrong due to case sensitivity and trailing spaces. The issue was resolved by normalizing input with strip and lower before comparison."
-          teamwork="Completed independently as a personal study aid. Required disciplined iteration and consistent testing across many element entries to confirm reliability."
+          teamwork="Worked with a partner to split development tasks. One person focused on the data structure and randomization while the other handled input validation and scoring logic. We tested each other's code and combined the components into a single working program."
           reflection="The project deepened understanding of data structures and reinforced how small programs can directly support classroom learning by turning memorization into an interactive feedback loop."
         />
 
@@ -486,7 +486,7 @@ while round_number <= 100:
     user_history.append(user_move)
     round_number += 1`}
           objective="Create an interactive Python game that allows users to play multiple rounds of Rock Paper Scissors against the computer while tracking scores and outcomes."
-          role="Developed the full game logic, user interaction system, and score-tracking functionality using Python."
+          role="Collaborated with a partner to develop the full game logic, user interaction system, and score-tracking functionality using Python."
           skills={[
             "Python programming fundamentals",
             "Conditional statements and loops",
@@ -495,7 +495,7 @@ while round_number <= 100:
             "Logical problem-solving",
           ]}
           challenges="One challenge was ensuring the score updated correctly after every round and that invalid inputs were handled properly. The program improved through testing multiple game scenarios and reorganizing the game loop."
-          teamwork="Completed independently and required persistence, troubleshooting, and iterative improvement throughout development."
+          teamwork="Worked with a partner to divide the project into logical components. One person built the game loop and input handling while the other designed the computer strategy and score tracker. We integrated our work and debugged the combined program together."
           reflection="This project strengthened understanding of programming structure and problem-solving, and taught the importance of testing code carefully and improving programs through debugging and revision."
         />
       </div>
