@@ -172,11 +172,13 @@ function Resume() {
           <ResumeBlock title="Experience">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <p className="font-semibold">
-                Founder and Lead Developer · thequantumbindapp.tech
+                Founder and Lead Developer · QuantumBind
               </p>
-              <p className="text-sm text-muted-foreground">September 2025 – Present</p>
+              <p className="text-sm text-muted-foreground">April 2026 – Present</p>
             </div>
-            <p className="text-sm text-muted-foreground">Emerald High School · Dublin, CA</p>
+            <p className="text-sm text-muted-foreground">
+              github.com/SooryaBalaji/QuantumBind · Dublin, CA
+            </p>
             <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[15px]">
               <li>Engineer localized web application interfaces optimized for advanced processing logic</li>
               <li>Maintain repository branches for open-access simulation tools</li>
@@ -188,15 +190,28 @@ function Resume() {
           <ResumeBlock title="Volunteer Experience">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <p className="font-semibold">
-                Community Technology Assistant · Local Community Organization
+                Eyelevel Learning Center · Inventory Management and Lesson Plan Packing
               </p>
-              <p className="text-sm text-muted-foreground">June 2024 – August 2025</p>
+              <p className="text-sm text-muted-foreground">March 2022 – April 2025</p>
             </div>
-            <p className="text-sm text-muted-foreground">Dublin, CA</p>
+            <p className="text-sm text-muted-foreground">Walnut Creek, CA</p>
             <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[15px]">
-              <li>Supervised weekly hardware peripheral allocation for regional data workshops</li>
-              <li>Organized instructional support files explaining simple operating systems tasks</li>
-              <li>Diagnosed data link degradation faults across basic workstation nodes</li>
+              <li>Unpacked monthly shipments of educational booklets and organized them across inventory shelves</li>
+              <li>Assembled customized monthly lesson plans tailored to each student based on assigned booklets</li>
+              <li>Maintained inventory accuracy through consistent stock tracking and organization</li>
+            </ul>
+
+            <div className="mt-6 flex flex-wrap items-baseline justify-between gap-2">
+              <p className="font-semibold">
+                Sydney Paige Foundation · Inventory Packing and Organization
+              </p>
+              <p className="text-sm text-muted-foreground">April 2025 – September 2025</p>
+            </div>
+            <p className="text-sm text-muted-foreground">Walnut Creek, CA</p>
+            <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[15px]">
+              <li>Managed incoming warehouse inventory and organized donated materials categorically</li>
+              <li>Packed educational resources for underprivileged students and schools in developing countries</li>
+              <li>Collaborated with warehouse volunteers to streamline categorization and packing workflows</li>
             </ul>
           </ResumeBlock>
 
@@ -219,11 +234,9 @@ function Resume() {
                   Structural
                 </p>
                 <ul className="list-disc space-y-1 pl-5 text-[15px]">
-                  <li>Microsoft Word</li>
-                  <li>Google Docs</li>
                   <li>Advanced Algebra II</li>
                   <li>Honors Chemistry</li>
-                  <li>CPR Certified</li>
+                  <li>Frontend and Backend Development</li>
                 </ul>
               </div>
               <div>
@@ -239,6 +252,7 @@ function Resume() {
               </div>
             </div>
           </ResumeBlock>
+
 
           <div className="mt-10 flex justify-center">
             <a
@@ -336,13 +350,22 @@ function ProjectCard({
 }) {
   return (
     <article className="grid gap-0 overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] lg:grid-cols-[1fr_1.4fr]">
-      <div className="border-b border-border bg-secondary/50 p-6 lg:border-b-0 lg:border-r">
-        <span className="inline-block rounded-md border border-border bg-card px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
+      <div className="flex flex-col justify-between gap-6 border-b border-border bg-secondary/50 p-8 lg:border-b-0 lg:border-r">
+        <span className="inline-block w-fit rounded-md border border-border bg-card px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
           Project {number}
         </span>
-        <pre className="mt-5 overflow-x-auto whitespace-pre-wrap rounded-lg bg-background/60 p-4 text-[11px] leading-relaxed text-foreground/80 font-mono">
-{code}
-        </pre>
+        <div>
+          <p className="font-display text-3xl font-semibold leading-tight">{title}</p>
+          <p className="mt-2 text-sm text-muted-foreground">{subtitle}</p>
+        </div>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex w-fit items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-card)] transition-all hover:translate-y-[-1px] hover:shadow-[var(--shadow-elevated)]"
+        >
+          View Project Code →
+        </a>
       </div>
       <div className="p-8 md:p-10">
         <div className="flex items-start justify-between gap-4">
@@ -366,21 +389,11 @@ function ProjectCard({
           <ProjectField label="Teamwork / Leadership" body={teamwork} />
           <ProjectField label="Reflection" body={reflection} />
         </div>
-
-        <div className="mt-8">
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-card)] transition-all hover:translate-y-[-1px] hover:shadow-[var(--shadow-elevated)]"
-          >
-            View Project Code
-          </a>
-        </div>
       </div>
     </article>
   );
 }
+
 
 function ProjectField({ label, body }: { label: string; body: string }) {
   return (
